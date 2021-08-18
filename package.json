@@ -1,32 +1,55 @@
 {
-  "name": "rocketchat_bot",
-  "version": "1.0.0",
-  "description": "rocketchat_bot",
-  "main": "index.js",
+  "name": "rocketchat-bot",
+  "version": "2.0.0",
+  "description": "A test repository for building a rocket chat bot\"",
+  "main": "./prod/index.ts",
   "scripts": {
     "prebuild": "rm -rf ./prod",
     "build": "tsc",
-    "start": "node ./prod/bot.js"
+    "lint": "eslint ./src/",
+    "start": "node -r dotenv/config ./prod/src/index.js",
+    "test": "echo 'No tests yet. Would you like to contribute some?'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dustin930/Rocket.Chat_Bot.git"
+    "url": "git+https://github.com/nhcarrigan/rocketchat-bot.git"
   },
   "keywords": [
-    "Rocket.Chat"
+    "rocketchat",
+    "bot",
+    "chatbot",
+    "typescript"
   ],
-  "author": "DustinLiu",
-  "license": "ISC",
+  "author": "Nicholas Carrigan",
+  "license": "AGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/Dustin930/Rocket.Chat_Bot/issues"
+    "url": "https://github.com/nhcarrigan/rocketchat-bot/issues"
   },
-  "homepage": "https://github.com/Dustin930/Rocket.Chat_Bot#readme",
-  "devDependencies": {
-    "@types/node": "^16.6.1",
-    "typescript": "^4.3.5"
+  "homepage": "https://github.com/nhcarrigan/rocketchat-bot#readme",
+  "engines": {
+    "node": "16.5.0",
+    "npm": "7.20.6"
   },
   "dependencies": {
     "@rocket.chat/sdk": "^0.1.0",
     "dotenv": "^10.0.0"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^15.3.1",
+    "@typescript-eslint/eslint-plugin": "4.29.2",
+    "@typescript-eslint/parser": "4.29.2",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "3.4.0",
+    "husky": "7.0.1",
+    "lint-staged": "11.1.2",
+    "prettier": "2.3.2",
+    "typescript": "^4.3.5"
   }
 }
