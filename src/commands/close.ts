@@ -24,15 +24,15 @@ export const close: CommandInt = {
         await driver.sendToRoom("Oops I broke it.", room);
         return;
       }
-      const modCheck = await isModerator(message.u.username, BOT);
+      // const modCheck = await isModerator(message.u.username, BOT);
 
-      if (!modCheck) {
-        await driver.sendToRoom(
-          "Sorry, but this command is locked to moderators.",
-          room
-        );
-        return;
-      }
+      // if (!modCheck) {
+      //   await driver.sendToRoom(
+      //     "Sorry, but this command is locked to moderators.",
+      //     room
+      //   );
+      //   return;
+      // }
 
       if (!room.startsWith("private-")) {
         await driver.sendToRoom(

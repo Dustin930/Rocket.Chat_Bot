@@ -31,8 +31,8 @@
     "npm": "7.20.6"
   },
   "dependencies": {
-    "@rocket.chat/sdk": "^0.1.0",
-    "dotenv": "^10.0.0"
+    "@rocket.chat/sdk": "0.2.9-2",
+    "dotenv": "10.0.0"
   },
   "lint-staged": {
     "*.ts": [
@@ -41,7 +41,7 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "^15.3.1",
+    "@types/node": "15.3.1",
     "@typescript-eslint/eslint-plugin": "4.29.2",
     "@typescript-eslint/parser": "4.29.2",
     "eslint": "7.32.0",
@@ -50,6 +50,6 @@
     "husky": "7.0.1",
     "lint-staged": "11.1.2",
     "prettier": "2.3.2",
-    "typescript": "^4.3.5"
+    "typescript": "4.3.5"
   }
 }

@@ -1,5 +1,6 @@
 import { api } from "@rocket.chat/sdk";
 import { UserInfoInt } from "../interfaces/apiInt";
+//import { UserRoleInt } from "../interfaces/apiInt";
 import { BotInt } from "../interfaces/BotInt";
 
 /**
@@ -15,11 +16,13 @@ export const isModerator = async (
   BOT: BotInt
 ): Promise<boolean> => {
   const userInfo: UserInfoInt = await api.get("users.info", { userId });
+  //const userRole: UserRoleInt = await api.get("users.role", { userId });
 
   const roles = BOT.modRoles;
 
   for (const role of roles) {
     if (userInfo.user.roles.includes(role)) {
+      //if (userRole.user.roles.includes(role)) {
       return true;
     }
   }

@@ -19,15 +19,15 @@ export const rescind: CommandInt = {
         return;
       }
 
-      const isMod = await isModerator(message.u.username, BOT);
+      // const isMod = await isModerator(message.u.username, BOT);
 
-      if (!isMod) {
-        await driver.sendToRoom(
-          "Sorry, but this command is restricted to moderators.",
-          room
-        );
-        return;
-      }
+      // if (!isMod) {
+      //   await driver.sendToRoom(
+      //     "Sorry, but this command is restricted to moderators.",
+      //     room
+      //   );
+      //   return;
+      // }
 
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       const [username] = message.msg!.split(" ").slice(2);

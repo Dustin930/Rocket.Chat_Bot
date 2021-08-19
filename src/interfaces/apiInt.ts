@@ -7,6 +7,13 @@ export interface UserInfoInt {
     username: string;
   };
 }
+export interface UserRoleInt {
+  user: {
+    _id: string;
+    roles: string[];
+    username: string;
+  };
+}
 
 export interface RoleListInt {
   users: [

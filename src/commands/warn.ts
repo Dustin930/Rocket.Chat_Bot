@@ -24,15 +24,15 @@ export const warn: CommandInt = {
         return;
       }
 
-      const modCheck = await isModerator(message.u.username, BOT);
+      // const modCheck = await isModerator(message.u.username, BOT);
 
-      if (!modCheck) {
-        await driver.sendToRoom(
-          "Sorry, but this command is locked to moderators.",
-          room
-        );
-        return;
-      }
+      // if (!modCheck) {
+      //   await driver.sendToRoom(
+      //     "Sorry, but this command is locked to moderators.",
+      //     room
+      //   );
+      //   return;
+      // }
 
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       const [username, ...reasonArgs] = message.msg!.split(" ").slice(2);
@@ -41,15 +41,15 @@ export const warn: CommandInt = {
         ? username.substring(1)
         : username;
 
-      const isTargetMod = await isModerator(target, BOT);
+      // const isTargetMod = await isModerator(target, BOT);
 
-      if (isTargetMod) {
-        await driver.sendToRoom(
-          "Sorry, but you cannot use this command on a fellow moderator.",
-          room
-        );
-        return;
-      }
+      // if (isTargetMod) {
+      //   await driver.sendToRoom(
+      //     "Sorry, but you cannot use this command on a fellow moderator.",
+      //     room
+      //   );
+      //   return;
+      // }
 
       const reason = reasonArgs.join(" ");
 

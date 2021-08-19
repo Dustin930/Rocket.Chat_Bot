@@ -15,13 +15,13 @@ import { CommandList } from "./_CommandList";
  */
 export const CommandHandler = async (
   err: unknown,
-  messages: MessageInt[]
+  messages: MessageInt
 ): Promise<void> => {
   if (err) {
     console.error(err);
     return;
   }
-  const message = messages[0];
+  const message = messages;
 
   console.log(message);
 
