@@ -3,6 +3,7 @@ import { BOT } from "..";
 import { logBotMessage } from "../helpers/botLogging";
 import { MessageInt } from "../interfaces/messageInt";
 import { CommandList } from "./_CommandList";
+import { CommandList_ops } from "./_CommandList_ops";
 
 /**
  * This is a command handler which runs on each message
